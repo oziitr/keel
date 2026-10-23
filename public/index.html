@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate hidden">
+      <form id="gate-form" class="gate-form">
+        <p class="mark">Keel</p>
+        <h1 id="gate-title">Operator sign in</h1>
+        <p id="gate-copy" class="lede">Password for this host console.</p>
+        <label>
+          Password
+          <input id="gate-pass" type="password" autocomplete="current-password" minlength="12" required spellcheck="false" />
+        </label>
+        <button type="submit" id="gate-btn">Enter</button>
+        <p id="gate-err" class="err" hidden></p>
+      </form>
+    </div>
+
+    <div id="app" class="shell hidden">
+      <aside class="rail">
+        <div class="brand">
+          <strong>Keel</strong>
+          <span id="host-mini">host</span>
+        </div>
+        <nav id="nav" class="stations"></nav>
+        <button type="button" id="logout" class="ghost">Sign out</button>
+      </aside>
+      <main class="deck">
+        <header class="mast">
+          <div>
+            <h1 id="headline">Overview</h1>
+            <p id="subhead" class="lede"></p>
+          </div>
+          <div class="clock">
+            <span id="clock"></span>
+            <button type="button" id="refresh">Refresh</button>
+          </div>
+        </header>
+        <section id="view"></section>
+      </main>
+    </div>
+
+    <div id="sheet" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <button type="button" class="sheet-scrim" id="sheet-scrim" aria-label="Close"></button>
+      <div class="sheet-panel">
+        <header class="sheet-head">
+          <h2 id="sheet-title">Detail</h2>
+          <button type="button" id="sheet-close" class="icon-btn">Close</button>
+        </header>
+        <div id="sheet-body" class="sheet-body"></div>
+        <footer id="sheet-foot" class="sheet-foot"></footer>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

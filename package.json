@@ -1,0 +1,42 @@
+{
+  "name": "keel-host-console",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Self-hosted Linux host console: stats, PM2, tmux, processes, logs, users, and local projects.",
+  "license": "MIT",
+  "bin": {
+    "keel": "./bin/keel.js"
+  },
+  "scripts": {
+    "start": "node bin/keel.js",
+    "dev": "node bin/keel.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "public",
+    "ecosystem.config.cjs",
+    ".env.example",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oziitr/keel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oziitr/keel/issues"
+  },
+  "homepage": "https://github.com/oziitr/keel#readme",
+  "keywords": [
+    "linux",
+    "dashboard",
+    "pm2",
+    "tmux",
+    "sysadmin",
+    "self-hosted"
+  ]
+}
